@@ -1,2 +1,2 @@
-def run():
-    print("hello from mmipylint")
+def run(config, staged):
+    print("hello from mmipylint. Staged:", staged)
