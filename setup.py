@@ -110,7 +110,7 @@ def main():
         data_files           = get_data_files(),
         entry_points = {
             'mothermayi' : [
-                'pre-commit = mmipylint.main:run',
+                'plugin = mmipylint.main:plugin',
             ]
         },
         scripts = [],
