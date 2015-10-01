@@ -18,7 +18,7 @@ def pre_commit(config, staged):
     to_check = mothermayi.files.python_source(staged)
     if not to_check:
         return
-    command = ['pylint'] + args + to_check
+    command = ['pylint'] + args + list(to_check)
     LOGGER.debug("Executing %s", " ".join(command))
     try:
         output = subprocess.check_output(command, stderr=subprocess.STDOUT)
