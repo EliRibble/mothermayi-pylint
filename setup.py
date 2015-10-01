@@ -89,7 +89,7 @@ class CustomSDistCommand(sdist): # pylint: disable=no-init
 
 def main():
     setup(
-        name                 = "mmipylint",
+        name                 = "mothermayi-pylint",
         version              = get_version(),
         description          = "The pylint plugin for mothermayi",
         url                  = "https://github.com/EliRibble/mothermayi-pylint",
