@@ -100,6 +100,7 @@ def main():
             'sdist'         : CustomSDistCommand,
         },
         install_requires    = [
+            'mothermayi>=0.4',
             'pylint==1.4.4',
         ],
         extras_require={

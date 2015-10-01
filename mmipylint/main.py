@@ -1,5 +1,6 @@
 import logging
 import mothermayi.errors
+import mothermayi.files
 import subprocess
 
 LOGGER = logging.getLogger(__name__)
@@ -14,8 +15,10 @@ def pre_commit(config, staged):
     pylint = config.get('pylint', {})
     args   = pylint.get('args', [])
 
-    command = ['pylint'] + args
-    command += staged
+    to_check = mothermayi.files.python_source(staged)
+    if not to_check:
+        return
+    command = ['pylint'] + args + to_check
     LOGGER.debug("Executing %s", " ".join(command))
     try:
         output = subprocess.check_output(command, stderr=subprocess.STDOUT)
