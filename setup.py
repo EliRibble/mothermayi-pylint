@@ -101,7 +101,7 @@ def main():
         },
         install_requires    = [
             'mothermayi>=0.4',
-            'pylint==1.4.4',
+            'pylint>=1.5.2',
         ],
         extras_require={
         },
